@@ -97,11 +97,14 @@
 		4160ABB028B56152002D4EF2 /* GithubFollowers */ = {
 			isa = PBXGroup;
 			children = (
-				4160ABB128B56152002D4EF2 /* AppDelegate.swift */,
-				4160ABB328B56152002D4EF2 /* SceneDelegate.swift */,
+				4160ABF528B56D30002D4EF2 /* Views */,
+				4160ABF428B56D2A002D4EF2 /* Models */,
+				4160ABF328B56D26002D4EF2 /* Screens */,
+				4160ABF228B56D22002D4EF2 /* Managers */,
+				4160ABF128B56D18002D4EF2 /* Extensions */,
+				4160ABF028B56D13002D4EF2 /* Support */,
+				4160ABEF28B56D09002D4EF2 /* Utilities */,
 				4160ABB528B56152002D4EF2 /* ViewController.swift */,
-				4160ABBA28B56154002D4EF2 /* Assets.xcassets */,
-				4160ABBC28B56154002D4EF2 /* LaunchScreen.storyboard */,
 				4160ABBF28B56154002D4EF2 /* Info.plist */,
 			);
 			path = GithubFollowers;
@@ -122,6 +125,59 @@
 				4160ABD428B56154002D4EF2 /* GithubFollowersUITestsLaunchTests.swift */,
 			);
 			path = GithubFollowersUITests;
+			sourceTree = "<group>";
+		};
+		4160ABEF28B56D09002D4EF2 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		4160ABF028B56D13002D4EF2 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				4160ABBA28B56154002D4EF2 /* Assets.xcassets */,
+				4160ABB128B56152002D4EF2 /* AppDelegate.swift */,
+				4160ABB328B56152002D4EF2 /* SceneDelegate.swift */,
+				4160ABBC28B56154002D4EF2 /* LaunchScreen.storyboard */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		4160ABF128B56D18002D4EF2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4160ABF228B56D22002D4EF2 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		4160ABF328B56D26002D4EF2 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		4160ABF428B56D2A002D4EF2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4160ABF528B56D30002D4EF2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
