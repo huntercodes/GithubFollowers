@@ -23,6 +23,10 @@
 		417D0A0828BBF2CF0007840B /* GFBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417D0A0728BBF2CF0007840B /* GFBodyLabel.swift */; };
 		417D0A0A28BBF2DB0007840B /* GFTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417D0A0928BBF2DB0007840B /* GFTitleLabel.swift */; };
 		417D0A0C28BBF2E80007840B /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417D0A0B28BBF2E80007840B /* GFButton.swift */; };
+		417D0A0E28BD32EF0007840B /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417D0A0D28BD32EF0007840B /* ErrorMessage.swift */; };
+		417D0A1028BD33B70007840B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417D0A0F28BD33B70007840B /* User.swift */; };
+		417D0A1228BD33BF0007840B /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417D0A1128BD33BF0007840B /* Follower.swift */; };
+		417D0A1428BD34AB0007840B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417D0A1328BD34AB0007840B /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,10 @@
 		417D0A0728BBF2CF0007840B /* GFBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFBodyLabel.swift; sourceTree = "<group>"; };
 		417D0A0928BBF2DB0007840B /* GFTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTitleLabel.swift; sourceTree = "<group>"; };
 		417D0A0B28BBF2E80007840B /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
+		417D0A0D28BD32EF0007840B /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		417D0A0F28BD33B70007840B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		417D0A1128BD33BF0007840B /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
+		417D0A1328BD34AB0007840B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +153,7 @@
 		4160ABEF28B56D09002D4EF2 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				417D0A0D28BD32EF0007840B /* ErrorMessage.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -171,6 +180,7 @@
 		4160ABF228B56D22002D4EF2 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				417D0A1328BD34AB0007840B /* NetworkManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -188,6 +198,8 @@
 		4160ABF428B56D2A002D4EF2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				417D0A0F28BD33B70007840B /* User.swift */,
+				417D0A1128BD33BF0007840B /* Follower.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -398,15 +410,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				417D0A1028BD33B70007840B /* User.swift in Sources */,
+				417D0A1228BD33BF0007840B /* Follower.swift in Sources */,
 				417D0A0628BBF2BE0007840B /* GFAlertVC.swift in Sources */,
 				417D0A0028BBED950007840B /* SearchVC.swift in Sources */,
 				417D0A0C28BBF2E80007840B /* GFButton.swift in Sources */,
 				417D09FC28BBED810007840B /* FavoritesListVC.swift in Sources */,
+				417D0A0E28BD32EF0007840B /* ErrorMessage.swift in Sources */,
 				417D0A0228BBEF900007840B /* UIViewController+Ext.swift in Sources */,
 				417D0A0828BBF2CF0007840B /* GFBodyLabel.swift in Sources */,
 				417D09FE28BBED8E0007840B /* FollowerListVC.swift in Sources */,
 				4160ABB228B56152002D4EF2 /* AppDelegate.swift in Sources */,
 				4160ABB428B56152002D4EF2 /* SceneDelegate.swift in Sources */,
+				417D0A1428BD34AB0007840B /* NetworkManager.swift in Sources */,
 				417D0A0A28BBF2DB0007840B /* GFTitleLabel.swift in Sources */,
 				417D0A0428BBF2AE0007840B /* GFTextField.swift in Sources */,
 			);
