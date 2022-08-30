@@ -26,7 +26,7 @@ class SearchVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = true
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     func createDismissKeyboardTapGesture() {
@@ -40,7 +40,7 @@ class SearchVC: UIViewController {
             return
         }
         
-        let followersListVC = FollowersListVC()
+        let followersListVC = FollowerListVC()
         followersListVC.username = usernameTextField.text
         followersListVC.title = usernameTextField.text
         navigationController?.pushViewController(followersListVC, animated: true)
