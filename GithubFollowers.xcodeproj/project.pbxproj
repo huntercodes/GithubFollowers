@@ -31,6 +31,7 @@
 		417D0A1828BE8C800007840B /* GFAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417D0A1728BE8C800007840B /* GFAvatarImageView.swift */; };
 		417D0A1A28BE8C9A0007840B /* GFEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417D0A1928BE8C9A0007840B /* GFEmptyStateView.swift */; };
 		417D0A1C28BE95810007840B /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417D0A1B28BE95810007840B /* UIHelper.swift */; };
+		417D0A1E28C144130007840B /* GFSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417D0A1D28C144130007840B /* GFSecondaryTitleLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		417D0A1728BE8C800007840B /* GFAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarImageView.swift; sourceTree = "<group>"; };
 		417D0A1928BE8C9A0007840B /* GFEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFEmptyStateView.swift; sourceTree = "<group>"; };
 		417D0A1B28BE95810007840B /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
+		417D0A1D28C144130007840B /* GFSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFSecondaryTitleLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +266,7 @@
 			children = (
 				417D0A0728BBF2CF0007840B /* GFBodyLabel.swift */,
 				417D0A0928BBF2DB0007840B /* GFTitleLabel.swift */,
+				417D0A1D28C144130007840B /* GFSecondaryTitleLabel.swift */,
 			);
 			path = Labels;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				417D09FC28BBED810007840B /* FavoritesListVC.swift in Sources */,
 				417D0A0E28BD32EF0007840B /* ErrorMessage.swift in Sources */,
 				417D0A1628BE8C610007840B /* FollowerCell.swift in Sources */,
+				417D0A1E28C144130007840B /* GFSecondaryTitleLabel.swift in Sources */,
 				417D0A1A28BE8C9A0007840B /* GFEmptyStateView.swift in Sources */,
 				417D0A0228BBEF900007840B /* UIViewController+Ext.swift in Sources */,
 				417D0A0828BBF2CF0007840B /* GFBodyLabel.swift in Sources */,
