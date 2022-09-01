@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GFRepoItemVC: UIViewController {
+class GFRepoItemVC: GFItemInfoVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()

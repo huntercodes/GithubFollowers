@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GFFollowerItemVC: UIViewController {
+class GFFollowerItemVC: GFItemInfoVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
