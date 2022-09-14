@@ -8,17 +8,17 @@
 import UIKit
 
 class GFTextField: UITextField {
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
-        config()
+        configure()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func config() {
+    private func configure() {
         translatesAutoresizingMaskIntoConstraints = false
         
         layer.cornerRadius = 10
@@ -35,7 +35,9 @@ class GFTextField: UITextField {
         backgroundColor = .tertiarySystemBackground
         autocorrectionType = .no
         returnKeyType = .go
+        clearButtonMode = .whileEditing
         placeholder = "Enter a username"
     }
     
 }
+

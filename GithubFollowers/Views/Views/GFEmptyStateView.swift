@@ -8,13 +8,13 @@
 import UIKit
 
 class GFEmptyStateView: UIView {
-
+    
     let messageLabel = GFTitleLabel(textAlignment: .center, fontSize: 28)
     let logoImageView = UIImageView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        config()
+        configure()
     }
     
     required init?(coder: NSCoder) {
@@ -26,16 +26,14 @@ class GFEmptyStateView: UIView {
         messageLabel.text = message
     }
     
-    private func config() {
-        addSubview(messageLabel)
-        addSubview(logoImageView)
+    private func configure() {
+        addSubviews(messageLabel, logoImageView)
         configureMessageLabel()
         configureLogoImageView()
     }
     
-    
     private func configureMessageLabel() {
-        messageLabel.numberOfLines  = 3
+        messageLabel.numberOfLines = 3
         messageLabel.textColor = .secondaryLabel
         
         let labelCenterYConstant: CGFloat = DeviceTypes.isiPhoneSE || DeviceTypes.isiPhone8Zoomed ? -80 : -150
@@ -47,7 +45,6 @@ class GFEmptyStateView: UIView {
             messageLabel.heightAnchor.constraint(equalToConstant: 200)
         ])
     }
-    
     
     private func configureLogoImageView() {
         logoImageView.image = Images.emptyStateLogo
