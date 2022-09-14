@@ -14,38 +14,31 @@ enum PersistenceActionType {
 enum PersistenceManager {
     
     static private let defaults = UserDefaults.standard
-    
-    enum Keys {
-        static let favorites = "favorites"
-    }
+    enum Keys { static let favorites = "favorites" }
     
     static func updateWith(favorite: Follower, actionType: PersistenceActionType, completed: @escaping (GFError?) -> Void) {
-        retreiveFavorites { result in
+        retrieveFavorites { result in
             switch result {
-                case .success(let favorites):
-                    var retreivedFavorites = favorites
-                    
+                case .success(var favorites):
                     switch actionType {
                         case .add:
-                            guard !retreivedFavorites.contains(favorite) else {
+                            guard !favorites.contains(favorite) else {
                                 completed(.alreadyInFavorites)
                                 return
                             }
-                            
-                            retreivedFavorites.append(favorite)
+                            favorites.append(favorite)
                         case .remove:
-                            retreivedFavorites.removeAll { $0.login == favorite.login }
+                            favorites.removeAll { $0.login == favorite.login }
                     }
-                    
-                    completed(save(favorites: retreivedFavorites))
-                    
+                
+                    completed(save(favorites: favorites))
                 case .failure(let error):
                     completed(error)
             }
         }
     }
     
-    static func retreiveFavorites(completed: @escaping (Result<[Follower], GFError>) -> Void) {
+    static func retrieveFavorites(completed: @escaping (Result<[Follower], GFError>) -> Void) {
         guard let favoritesData = defaults.object(forKey: Keys.favorites) as? Data else {
             completed(.success([]))
             return
