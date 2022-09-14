@@ -15,7 +15,7 @@ class FollowerCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        config()
+        configure()
     }
     
     required init?(coder: NSCoder) {
@@ -23,14 +23,12 @@ class FollowerCell: UICollectionViewCell {
     }
     
     func set(follower: Follower) {
-        usernameLabel.text = follower.login
         avatarImageView.downloadImage(from: follower.avatarUrl)
+        usernameLabel.text = follower.login
     }
     
-    private func config() {
-        addSubview(avatarImageView)
-        addSubview(usernameLabel)
-        
+    private func configure() {
+        addSubviews(avatarImageView, usernameLabel)
         let padding: CGFloat = 8
         
         NSLayoutConstraint.activate([

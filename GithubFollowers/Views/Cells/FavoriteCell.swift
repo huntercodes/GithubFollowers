@@ -15,7 +15,7 @@ class FavoriteCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        config()
+        configure()
     }
     
     required init?(coder: NSCoder) {
@@ -23,14 +23,12 @@ class FavoriteCell: UITableViewCell {
     }
     
     func set(favorite: Follower) {
-        usernameLabel.text = favorite.login
         avatarImageView.downloadImage(from: favorite.avatarUrl)
+        usernameLabel.text = favorite.login
     }
     
-    private func config() {
-        addSubview(avatarImageView)
-        addSubview(usernameLabel)
-        
+    private func configure() {
+        addSubviews(avatarImageView, usernameLabel)
         accessoryType = .disclosureIndicator
         let padding: CGFloat = 12
         
@@ -46,5 +44,5 @@ class FavoriteCell: UITableViewCell {
             usernameLabel.heightAnchor.constraint(equalToConstant: 40)
         ])
     }
-
+    
 }
