@@ -31,19 +31,19 @@ class GFUserInfoHeaderVC: UIViewController {
         super.viewDidLoad()
         view.addSubviews(avatarImageView, usernameLabel, nameLabel, locationImageView, locationLabel, bioLabel)
         layoutUI()
-        configUIElements()
+        configureUIElements()
     }
     
-    func configUIElements() {
+    func configureUIElements() {
         avatarImageView.downloadImage(fromURL: user.avatarUrl)
         usernameLabel.text = user.login
-        nameLabel.text = user.name ?? "No Name Provided"
-        locationLabel.text = user.location ?? "No Location Provided"
-        bioLabel.text = user.bio ?? "No Bio Provided"
+        nameLabel.text = user.name ?? ""
+        locationLabel.text = user.location
+        bioLabel.text = user.bio ?? "No bio available"
         bioLabel.numberOfLines = 3
         
-        locationImageView.image = UIImage(systemName: SFSymbols.location)
-        locationImageView.tintColor = .secondaryLabel
+        locationImageView.image = SFSymbols.location
+        locationImageView.tintColor = .label
     }
     
     func layoutUI() {

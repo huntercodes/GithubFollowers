@@ -9,10 +9,10 @@ import UIKit
 
 class GFAlertVC: UIViewController {
     
-    let containerView = UIView()
+    let containerView = GFAlertContainerView()
     let titleLabel = GFTitleLabel(textAlignment: .center, fontSize: 20)
     let messageLabel = GFBodyLabel(textAlignment: .center)
-    let actionButton = GFButton(backgroundColor: .systemPink, title: "Ok")
+    let actionButton = GFButton(color: .systemPink, title: "Ok", systemImageName: "checkmark.circle")
     
     var alertTitle: String?
     var message: String?
@@ -35,13 +35,14 @@ class GFAlertVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.black.withAlphaComponent(0.75)
         view.addSubviews(containerView, titleLabel, actionButton, messageLabel)
-        configContainerView()
-        configTitleLabel()
-        configActionButton()
-        configMessageLabel()
+        
+        configureContainerView()
+        configureTitleLabel()
+        configureActionButton()
+        configureMessageLabel()
     }
     
-    func configContainerView() {
+    func configureContainerView() {
         NSLayoutConstraint.activate([
             containerView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             containerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -50,7 +51,7 @@ class GFAlertVC: UIViewController {
         ])
     }
     
-    func configTitleLabel() {
+    func configureTitleLabel() {
         titleLabel.text = alertTitle ?? "Something went wrong"
         
         NSLayoutConstraint.activate([
@@ -61,7 +62,7 @@ class GFAlertVC: UIViewController {
         ])
     }
     
-    func configActionButton() {
+    func configureActionButton() {
         actionButton.setTitle(buttonTitle ?? "Ok", for: .normal)
         actionButton.addTarget(self, action: #selector(dismissVC), for: .touchUpInside)
         
@@ -73,7 +74,7 @@ class GFAlertVC: UIViewController {
         ])
     }
     
-    func configMessageLabel() {
+    func configureMessageLabel() {
         messageLabel.text = message ?? "Unable to complete request"
         messageLabel.numberOfLines = 4
         

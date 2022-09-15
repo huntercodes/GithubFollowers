@@ -11,7 +11,7 @@ class FavoritesListVC: GFDataLoadingVC {
     
     let tableView = UITableView()
     var favorites: [Follower] = []
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewController()
@@ -50,14 +50,16 @@ class FavoritesListVC: GFDataLoadingVC {
                     self.updateUI(with: favorites)
                     
                 case .failure(let error):
-                    self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
+                    DispatchQueue.main.async {
+                        self.presentGFAlert(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
+                    }
             }
         }
     }
     
     func updateUI(with favorites: [Follower]) {
         if favorites.isEmpty {
-            self.showEmptyStateView(with: "No Favorites? \n Add one on the follower screen.", in: self.view)
+            self.showEmptyStateView(with: "No Favorites?\nAdd one on the follower screen.", in: self.view)
         } else  {
             self.favorites = favorites
             DispatchQueue.main.async {
@@ -66,7 +68,6 @@ class FavoritesListVC: GFDataLoadingVC {
             }
         }
     }
-    
 }
 
 extension FavoritesListVC: UITableViewDataSource, UITableViewDelegate {
@@ -100,7 +101,9 @@ extension FavoritesListVC: UITableViewDataSource, UITableViewDelegate {
                 return
             }
             
-            self.presentGFAlertOnMainThread(title: "Unable to remove", message: error.rawValue, buttonTitle: "Ok")
+            DispatchQueue.main.async {
+                self.presentGFAlert(title: "Unable to remove", message: error.rawValue, buttonTitle: "Ok")
+            }
         }
     }
     
